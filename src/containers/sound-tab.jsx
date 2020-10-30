@@ -31,11 +31,6 @@ import {
     openSoundRecorder
 } from '../reducers/modals';
 
-import {
-    activateTab,
-    COSTUMES_TAB_INDEX
-} from '../reducers/editor-tab';
-
 import {setRestore} from '../reducers/restore-deletion';
 import {showStandardAlert, closeAlertWithId} from '../reducers/alerts';
 
@@ -155,7 +150,6 @@ class SoundTab extends React.Component {
 
             this.setState({selectedSoundIndex: sprite.sounds.indexOf(activeSound)});
         } else if (dropInfo.dragType === DragConstants.BACKPACK_COSTUME) {
-            this.props.onActivateCostumesTab();
             this.props.vm.addCostume(dropInfo.payload.body, {
                 name: dropInfo.payload.name
             });
@@ -281,7 +275,6 @@ SoundTab.propTypes = {
     editingTarget: PropTypes.string,
     intl: intlShape,
     isRtl: PropTypes.bool,
-    onActivateCostumesTab: PropTypes.func.isRequired,
     onCloseImporting: PropTypes.func.isRequired,
     onNewSoundFromLibraryClick: PropTypes.func.isRequired,
     onNewSoundFromRecordingClick: PropTypes.func.isRequired,
@@ -314,7 +307,6 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    onActivateCostumesTab: () => dispatch(activateTab(COSTUMES_TAB_INDEX)),
     onNewSoundFromLibraryClick: e => {
         e.preventDefault();
         dispatch(openSoundLibrary());
