@@ -1,0 +1,408 @@
+{
+  "targets": [
+    {
+      "isStage": true,
+      "name": "Stage",
+      "variables": {
+        "`jEk@4|i[#Fk?(8x)AV.-my variable": [
+          "my variable",
+          0
+        ]
+      },
+      "lists": {},
+      "broadcasts": {},
+      "blocks": {
+        "QaI%,6/-Tv6C[KsWv,/3": {
+          "opcode": "looks_switchbackdropto",
+          "next": null,
+          "parent": "pbtlb^OpV#zC].6;tW2B",
+          "inputs": {
+            "BACKDROP": [
+              1,
+              "di[oL~mJQFkWu|0w!hpg"
+            ]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "di[oL~mJQFkWu|0w!hpg": {
+          "opcode": "looks_backdrops",
+          "next": null,
+          "parent": "QaI%,6/-Tv6C[KsWv,/3",
+          "inputs": {},
+          "fields": {
+            "BACKDROP": [
+              "Greek Theater",
+              null
+            ]
+          },
+          "shadow": true,
+          "topLevel": false
+        },
+        "=hkaP2b2}jovvS#ZnwYA": {
+          "opcode": "event_whenflagclicked",
+          "next": "pbtlb^OpV#zC].6;tW2B",
+          "parent": null,
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": true,
+          "x": 136,
+          "y": 185
+        },
+        ",),)XNbKp}/7to@s0Sgg": {
+          "opcode": "operator_random",
+          "next": null,
+          "parent": "ltrDbe3zb5yN4[wgq-pZ",
+          "inputs": {
+            "FROM": [
+              1,
+              [
+                4,
+                "0"
+              ]
+            ],
+            "TO": [
+              1,
+              [
+                4,
+                "1"
+              ]
+            ]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "pbtlb^OpV#zC].6;tW2B": {
+          "opcode": "control_if_else",
+          "next": null,
+          "parent": "=hkaP2b2}jovvS#ZnwYA",
+          "inputs": {
+            "CONDITION": [
+              2,
+              "ltrDbe3zb5yN4[wgq-pZ"
+            ],
+            "SUBSTACK": [
+              2,
+              "QaI%,6/-Tv6C[KsWv,/3"
+            ],
+            "SUBSTACK2": [
+              2,
+              "LzV^[A20]A$B1*MC_czN"
+            ]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "ltrDbe3zb5yN4[wgq-pZ": {
+          "opcode": "operator_gt",
+          "next": null,
+          "parent": "pbtlb^OpV#zC].6;tW2B",
+          "inputs": {
+            "OPERAND1": [
+              3,
+              ",),)XNbKp}/7to@s0Sgg",
+              [
+                10,
+                ""
+              ]
+            ],
+            "OPERAND2": [
+              1,
+              [
+                10,
+                "0."
+              ]
+            ]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "LzV^[A20]A$B1*MC_czN": {
+          "opcode": "looks_switchbackdropto",
+          "next": null,
+          "parent": "pbtlb^OpV#zC].6;tW2B",
+          "inputs": {
+            "BACKDROP": [
+              1,
+              "=_]0`oS|O6|SXS4#Ip:?"
+            ]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "=_]0`oS|O6|SXS4#Ip:?": {
+          "opcode": "looks_backdrops",
+          "next": null,
+          "parent": "LzV^[A20]A$B1*MC_czN",
+          "inputs": {},
+          "fields": {
+            "BACKDROP": [
+              "Arctic",
+              null
+            ]
+          },
+          "shadow": true,
+          "topLevel": false
+        }
+      },
+      "comments": {},
+      "currentCostume": 3,
+      "costumes": [
+        {
+          "assetId": "cd21514d0531fdffb22204e0ec5ed84a",
+          "name": "backdrop1",
+          "md5ext": "cd21514d0531fdffb22204e0ec5ed84a.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 240,
+          "rotationCenterY": 180
+        },
+        {
+          "assetId": "93d71e8b8a96cc007b8d68f36acd338a",
+          "name": "Greek Theater",
+          "bitmapResolution": 2,
+          "md5ext": "93d71e8b8a96cc007b8d68f36acd338a.png",
+          "dataFormat": "png",
+          "rotationCenterX": 480,
+          "rotationCenterY": 360
+        },
+        {
+          "assetId": "e5f794c8756ca0cead5cb7e7fe354c41",
+          "name": "Playground",
+          "bitmapResolution": 2,
+          "md5ext": "e5f794c8756ca0cead5cb7e7fe354c41.png",
+          "dataFormat": "png",
+          "rotationCenterX": 480,
+          "rotationCenterY": 360
+        },
+        {
+          "assetId": "67e0db3305b3c8bac3a363b1c428892e",
+          "name": "Arctic",
+          "bitmapResolution": 2,
+          "dataFormat": "png",
+          "rotationCenterX": 480,
+          "rotationCenterY": 360
+        }
+      ],
+      "sounds": [
+        {
+          "assetId": "83a9787d4cb6f3b7632b4ddfebf74367",
+          "name": "pop",
+          "dataFormat": "wav",
+          "format": "",
+          "rate": 44100,
+          "sampleCount": 1032,
+          "md5ext": "83a9787d4cb6f3b7632b4ddfebf74367.wav"
+        }
+      ],
+      "volume": 100,
+      "layerOrder": 0,
+      "tempo": 60,
+      "videoTransparency": 50,
+      "videoState": "on",
+      "textToSpeechLanguage": null
+    },
+    {
+      "isStage": false,
+      "name": "first_char",
+      "variables": {},
+      "lists": {},
+      "broadcasts": {},
+      "blocks": {
+        "D-QK(%$D)=@(dL,U}f{t": {
+          "opcode": "event_whenflagclicked",
+          "next": "Bm;?k3Ce_s+ziT`EMZJG",
+          "parent": null,
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": true,
+          "x": 161,
+          "y": 210
+        },
+        "Bm;?k3Ce_s+ziT`EMZJG": {
+          "opcode": "motion_gotoxy",
+          "next": null,
+          "parent": "D-QK(%$D)=@(dL,U}f{t",
+          "inputs": {
+            "X": [
+              1,
+              [
+                4,
+                "-121"
+              ]
+            ],
+            "Y": [
+              1,
+              [
+                4,
+                "-16"
+              ]
+            ]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        }
+      },
+      "comments": {},
+      "currentCostume": 0,
+      "costumes": [
+        {
+          "assetId": "b7853f557e4426412e64bb3da6531a99",
+          "name": "costume1",
+          "bitmapResolution": 1,
+          "md5ext": "b7853f557e4426412e64bb3da6531a99.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 48,
+          "rotationCenterY": 50
+        },
+        {
+          "assetId": "e6ddc55a6ddd9cc9d84fe0b4c21e016f",
+          "name": "costume2",
+          "bitmapResolution": 1,
+          "md5ext": "e6ddc55a6ddd9cc9d84fe0b4c21e016f.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 46,
+          "rotationCenterY": 53
+        }
+      ],
+      "sounds": [
+        {
+          "assetId": "83c36d806dc92327b9e7049a565c6bff",
+          "name": "Meow",
+          "dataFormat": "wav",
+          "format": "",
+          "rate": 44100,
+          "sampleCount": 37376,
+          "md5ext": "83c36d806dc92327b9e7049a565c6bff.wav"
+        }
+      ],
+      "volume": 100,
+      "layerOrder": 2,
+      "visible": true,
+      "x": -121,
+      "y": -16,
+      "size": 100,
+      "direction": 90,
+      "draggable": false,
+      "rotationStyle": "all around"
+    },
+    {
+      "isStage": false,
+      "name": "second_char",
+      "variables": {},
+      "lists": {},
+      "broadcasts": {},
+      "blocks": {
+        "NId{)sA6Fg+kP;D|+c{r": {
+          "opcode": "event_whenflagclicked",
+          "next": ".u+rlR98Fc/D!BnWnm.%",
+          "parent": null,
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": true,
+          "x": 106,
+          "y": 239
+        },
+        ".u+rlR98Fc/D!BnWnm.%": {
+          "opcode": "motion_gotoxy",
+          "next": null,
+          "parent": "NId{)sA6Fg+kP;D|+c{r",
+          "inputs": {
+            "X": [
+              1,
+              [
+                4,
+                "137"
+              ]
+            ],
+            "Y": [
+              1,
+              [
+                4,
+                "12"
+              ]
+            ]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        }
+      },
+      "comments": {},
+      "currentCostume": 0,
+      "costumes": [
+        {
+          "assetId": "895cdda4f2bd9d6f50ff07188e7ce395",
+          "name": "catcher-a",
+          "bitmapResolution": 1,
+          "md5ext": "895cdda4f2bd9d6f50ff07188e7ce395.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 41,
+          "rotationCenterY": 51
+        },
+        {
+          "assetId": "a31e30677637ae4de975d40b6d822853",
+          "name": "catcher-b",
+          "bitmapResolution": 1,
+          "md5ext": "a31e30677637ae4de975d40b6d822853.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 41,
+          "rotationCenterY": 47
+        },
+        {
+          "assetId": "99af13802e9bfd7b4a4bfb8ead825c0c",
+          "name": "catcher-c",
+          "bitmapResolution": 1,
+          "md5ext": "99af13802e9bfd7b4a4bfb8ead825c0c.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 60,
+          "rotationCenterY": 87
+        },
+        {
+          "assetId": "8aa875f077c405e2045f5ab60705e712",
+          "name": "catcher-d",
+          "bitmapResolution": 1,
+          "md5ext": "8aa875f077c405e2045f5ab60705e712.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 86,
+          "rotationCenterY": 46
+        }
+      ],
+      "sounds": [
+        {
+          "assetId": "83a9787d4cb6f3b7632b4ddfebf74367",
+          "name": "pop",
+          "dataFormat": "wav",
+          "format": "",
+          "rate": 44100,
+          "sampleCount": 1032,
+          "md5ext": "83a9787d4cb6f3b7632b4ddfebf74367.wav"
+        }
+      ],
+      "volume": 100,
+      "layerOrder": 1,
+      "visible": true,
+      "x": 137,
+      "y": 12,
+      "size": 100,
+      "direction": 90,
+      "draggable": false,
+      "rotationStyle": "all around"
+    }
+  ],
+  "monitors": [],
+  "extensions": [],
+  "meta": {
+    "semver": "3.0.0",
+    "vm": "0.2.0-prerelease.20201016122132",
+    "agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+  }
+}
