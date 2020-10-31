@@ -11,9 +11,7 @@ import VM from 'scratch-vm';
 import Renderer from 'scratch-render';
 
 import Blocks from '../../containers/blocks.jsx';
-import CostumeTab from '../../containers/costume-tab.jsx';
 import TargetPane from '../../containers/target-pane.jsx';
-import SoundTab from '../../containers/sound-tab.jsx';
 import StageWrapper from '../../containers/stage-wrapper.jsx';
 import Loader from '../loader/loader.jsx';
 import Box from '../box/box.jsx';
@@ -37,8 +35,6 @@ import {resolveStageSize} from '../../lib/screen-utils';
 import styles from './gui.css';
 import addExtensionIcon from './icon--extensions.svg';
 import codeIcon from './icon--code.svg';
-import costumesIcon from './icon--costumes.svg';
-import soundsIcon from './icon--sounds.svg';
 
 const messages = defineMessages({
     addExtension: {
@@ -78,7 +74,6 @@ const GUIComponent = props => {
         children,
         connectionModalVisible,
         costumeLibraryVisible,
-        costumesTabVisible,
         enableCommunity,
         intl,
         isCreating,
@@ -95,8 +90,6 @@ const GUIComponent = props => {
         onLogOut,
         onOpenRegistration,
         onToggleLoginOpen,
-        onActivateCostumesTab,
-        onActivateSoundsTab,
         onActivateTab,
         onClickLogo,
         onExtensionButtonClick,
@@ -111,9 +104,7 @@ const GUIComponent = props => {
         onTelemetryModalOptIn,
         onTelemetryModalOptOut,
         showComingSoon,
-        soundsTabVisible,
         stageSizeMode,
-        targetIsStage,
         telemetryModalVisible,
         tipsLibraryVisible,
         vm,
@@ -255,42 +246,6 @@ const GUIComponent = props => {
                                             id="gui.gui.codeTab"
                                         />
                                     </Tab>
-                                    <Tab
-                                        className={tabClassNames.tab}
-                                        onClick={onActivateCostumesTab}
-                                    >
-                                        <img
-                                            draggable={false}
-                                            src={costumesIcon}
-                                        />
-                                        {targetIsStage ? (
-                                            <FormattedMessage
-                                                defaultMessage="Backdrops"
-                                                description="Button to get to the backdrops panel"
-                                                id="gui.gui.backdropsTab"
-                                            />
-                                        ) : (
-                                            <FormattedMessage
-                                                defaultMessage="Costumes"
-                                                description="Button to get to the costumes panel"
-                                                id="gui.gui.costumesTab"
-                                            />
-                                        )}
-                                    </Tab>
-                                    <Tab
-                                        className={tabClassNames.tab}
-                                        onClick={onActivateSoundsTab}
-                                    >
-                                        <img
-                                            draggable={false}
-                                            src={soundsIcon}
-                                        />
-                                        <FormattedMessage
-                                            defaultMessage="Sounds"
-                                            description="Button to get to the sounds panel"
-                                            id="gui.gui.soundsTab"
-                                        />
-                                    </Tab>
                                 </TabList>
                                 <TabPanel className={tabClassNames.tabPanel}>
                                     <Box className={styles.blocksWrapper}>
@@ -321,12 +276,6 @@ const GUIComponent = props => {
                                     <Box className={styles.watermark}>
                                         <Watermark />
                                     </Box>
-                                </TabPanel>
-                                <TabPanel className={tabClassNames.tabPanel}>
-                                    {costumesTabVisible ? <CostumeTab vm={vm} /> : null}
-                                </TabPanel>
-                                <TabPanel className={tabClassNames.tabPanel}>
-                                    {soundsTabVisible ? <SoundTab vm={vm} /> : null}
                                 </TabPanel>
                             </Tabs>
                             {backpackVisible ? (
@@ -380,7 +329,6 @@ GUIComponent.propTypes = {
     cardsVisible: PropTypes.bool,
     children: PropTypes.node,
     costumeLibraryVisible: PropTypes.bool,
-    costumesTabVisible: PropTypes.bool,
     enableCommunity: PropTypes.bool,
     intl: intlShape.isRequired,
     isCreating: PropTypes.bool,
@@ -390,8 +338,6 @@ GUIComponent.propTypes = {
     isShared: PropTypes.bool,
     loading: PropTypes.bool,
     logo: PropTypes.string,
-    onActivateCostumesTab: PropTypes.func,
-    onActivateSoundsTab: PropTypes.func,
     onActivateTab: PropTypes.func,
     onClickAbout: PropTypes.func,
     onClickAccountNav: PropTypes.func,
@@ -415,7 +361,6 @@ GUIComponent.propTypes = {
     showComingSoon: PropTypes.bool,
     soundsTabVisible: PropTypes.bool,
     stageSizeMode: PropTypes.oneOf(Object.keys(STAGE_SIZE_MODES)),
-    targetIsStage: PropTypes.bool,
     telemetryModalVisible: PropTypes.bool,
     tipsLibraryVisible: PropTypes.bool,
     vm: PropTypes.instanceOf(VM).isRequired
